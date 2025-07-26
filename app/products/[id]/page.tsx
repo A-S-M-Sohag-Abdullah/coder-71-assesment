@@ -5,7 +5,8 @@ import { cookies } from "next/headers";
 import jwt from "jsonwebtoken";
 import { redirect } from "next/navigation";
 import AddToCartButton from "@/app/components/AddtoCartBtn";
-// Server-side fetch
+
+// Fetch product by ID
 async function getProduct(id: string): Promise<Product> {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
     cache: "no-store",
@@ -18,9 +19,13 @@ async function getProduct(id: string): Promise<Product> {
   return res.json();
 }
 
-// Optional: SEO metadata
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const product = await getProduct(params.id);
+// SEO metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const product = await getProduct((await params).id);
 
   return {
     title: `${product.title} | Product Catalog`,
@@ -28,17 +33,16 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
+// ✅ Do NOT define PageProps type explicitly here
 export default async function ProductDetailsPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const cookieStore = await cookies();
   const token = cookieStore.get("token")?.value;
 
-  if (!token) {
-    redirect("/login");
-  }
+  if (!token) redirect("/login");
 
   try {
     jwt.verify(token, process.env.JWT_SECRET!);
@@ -46,7 +50,7 @@ export default async function ProductDetailsPage({
     redirect("/login");
   }
 
-  const product = await getProduct(params.id);
+  const product = await getProduct((await params).id);
 
   return (
     <main className="p-6">
@@ -66,7 +70,7 @@ export default async function ProductDetailsPage({
           <h1 className="text-2xl font-bold">{product.title}</h1>
           <p className="text-gray-500 capitalize mb-2">{product.category}</p>
           <p className="text-xl font-semibold text-blue-600">
-            ${product.price}
+            ${product.price.toFixed(2)}
           </p>
           <p className="mt-4">{product.description}</p>
           <AddToCartButton product={product} />
