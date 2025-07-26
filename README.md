@@ -1,19 +1,62 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+=======
+# 🛒 Next.js E-Commerce App
+>>>>>>> 8f74b1575438cc4f5b972fd38df9334ab94297dd
 
-## Getting Started
+A modern eCommerce web application built with **Next.js App Router**, **Redux Toolkit**, and **JWT-based cookie authentication**.
 
-First, run the development server:
+---
 
+## 🚀 Features
+
+- 🔐 Authentication
+  - JWT-based login system (cookie-based storage)
+  - Persistent login state on refresh
+  - Protected routes (e.g., `/cart` `/products/[id]` only for logged-in users)
+
+- 🛍️ Cart Functionality
+  - Add, remove, and update item quantities
+  - Cart persists in `localStorage`
+  - Toast notifications using `react-toastify`
+
+- 🛍️ Search Functionality
+  - Search with keystokes
+
+- 🧾 Products
+  - Product listing
+  - Individual product detail view
+  - `Add to Cart` with real-time feedback
+
+- ⚙️ Tech Stack
+  - **Frontend**: Next.js (App Router)
+  - **State Management**: Redux Toolkit
+  - **Styling**: Tailwind CSS
+  - **Notifications**: React Toastify
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 1. Clone the repo
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/nextjs-ecommerce.git
+cd nextjs-ecommerce
 ```
+### 2. Install dependencies
+```
+npm install
+```
+### 3. Setup environment variables
+```
+JWT_SECRET=1234567890
+```
+### 4. Run the app
+```
+npm run dev
+```
+<<<<<<< HEAD
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -90,3 +133,5 @@ JWT_SECRET=1234567890
 npm run dev
 ```
 >>>>>>> eeb85e054dfd6e0ed40553f59bff41016c676941
+=======
+>>>>>>> 8f74b1575438cc4f5b972fd38df9334ab94297dd
