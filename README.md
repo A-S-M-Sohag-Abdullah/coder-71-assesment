@@ -9,6 +9,8 @@ A modern eCommerce web application built with **Next.js App Router**, **Redux To
 
 ---
 
+Live Demo : https://coder-71-assesment.vercel.app/
+
 ## 🚀 Features
 
 - 🔐 Authentication
@@ -37,12 +39,14 @@ A modern eCommerce web application built with **Next.js App Router**, **Redux To
 
 ---
 
+
+
 ## 🧑‍💻 Getting Started
 
 ### 1. Clone the repo
 ```bash
 git clone https://github.com/yourusername/nextjs-ecommerce.git
-cd nextjs-ecommerce
+cd coder-71-assesment
 ```
 ### 2. Install dependencies
 ```
