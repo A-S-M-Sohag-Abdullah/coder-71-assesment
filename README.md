@@ -9,12 +9,15 @@ A modern eCommerce web application built with **Next.js App Router**, **Redux To
 - 🔐 Authentication
   - JWT-based login system (cookie-based storage)
   - Persistent login state on refresh
-  - Protected routes (e.g., `/cart` only for logged-in users)
+  - Protected routes (e.g., `/cart` `/products/[id]` only for logged-in users)
 
 - 🛍️ Cart Functionality
   - Add, remove, and update item quantities
   - Cart persists in `localStorage`
   - Toast notifications using `react-toastify`
+
+- 🛍️ Search Functionality
+  - Search with keystokes
 
 - 🧾 Products
   - Product listing
