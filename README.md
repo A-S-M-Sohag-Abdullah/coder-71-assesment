@@ -33,5 +33,18 @@ A modern eCommerce web application built with **Next.js App Router**, **Redux To
 
 ### 1. Clone the repo
 ```bash
-git clone [https://github.com/yourusername/nextjs-ecommerce.git](https://github.com/A-S-M-Sohag-Abdullah/coder-71-ecommerce-app.git)
+git clone https://github.com/yourusername/nextjs-ecommerce.git
 cd nextjs-ecommerce
+```
+### 2. Install dependencies
+```
+npm install
+```
+### 3. Setup environment variables
+```
+JWT_SECRET=1234567890
+```
+### 4. Run the app
+```
+npm run dev
+```
