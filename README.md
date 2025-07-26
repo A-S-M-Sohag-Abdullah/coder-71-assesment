@@ -42,7 +42,7 @@ Live Demo : https://coder-71-assesment.vercel.app/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/nextjs-ecommerce.git
+git clone https://github.com/A-S-M-Sohag-Abdullah/coder-71-assesment.git
 cd coder-71-assesment
 ```
 ### 2. Install dependencies
