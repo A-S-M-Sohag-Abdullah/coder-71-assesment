@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-=======
+
 # 🛒 Next.js E-Commerce App
->>>>>>> 8f74b1575438cc4f5b972fd38df9334ab94297dd
+
 
 A modern eCommerce web application built with **Next.js App Router**, **Redux Toolkit**, and **JWT-based cookie authentication**.
 
